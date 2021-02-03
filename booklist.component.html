@@ -1,0 +1,17 @@
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>PubYear</th>
+    </tr>
+    <tr *ngFor="let eachBook of booklist; let bookIndex = index;">
+        <td><a [routerLink] = "['/bookdetail', bookIndex]">{{eachBook.name}}</a></td>
+        <td>{{eachBook.author}}</td>
+        <td>{{eachBook.genre}}</td>
+        <td>{{eachBook.pubyear}}</td>
+    </tr>
+</table>
+This is the booklist object
+{{tempBookList | json }}
+<button [routerLink]="['/home']">Back</button>
